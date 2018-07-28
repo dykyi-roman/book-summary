@@ -7,3 +7,5 @@ Description: The practice of enterprise application development has benefited fr
 Web[en]: [read](https://martinfowler.com/eaaCatalog/index.html)
 
 PDF[ru]: [read](http://www.ooart.ru/uploads/book/arhitektura_korporativnyh_programmnyh_prilozhenij_fauler_m.pdf)
+
+____
