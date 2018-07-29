@@ -18,7 +18,7 @@ ___
 [Application Layer](#ApplicationLayer)  
 [Domain Layer](#DomainLayer)  
 [Infrastructure Layer](#InfrastructureLayer)  
-[DDD Conponents](#DDDComponents)  
+[DDD Conponents](#DDDConponents)  
 [- DTO](#DTO)  
 [- Value Objects (VO)](#VO)  
 [- Embedded Value](#EmbeddedValue)  
@@ -60,7 +60,7 @@ Include:
 
 • Event
 
-## <a name="Domainayer"><h2>Domain Layer</h2></a>
+## <a name="DomainLayer"><h2>Domain Layer</h2></a>
 The Domain Layer contains the real business logic, but does not contain any infrastructure specific code. The infrastructure specific implementation is provided by the Infrastructure Layer. Include:
 
 • Aggregate
@@ -158,7 +158,7 @@ Another interesting detail about modeling your Domain concepts using Value Objec
 
 Many small objects make sense in an OO system that don't make sense as tables in a database. Examples include currency-aware money objects and date ranges. Although the default thinking is to save an object as a table, no sane person would want a table of money values. An Embedded Value maps the values of an object to fields in the record of the object's owner.
 
-## <a name="Entity"><h2>Entity)</h2></a>  
+## <a name="Entity"><h2>Entity</h2></a>  
 
 Entity – this is value object with identity. For example: Order, Person. Can exist in self a Value Object.
 
