@@ -12,6 +12,8 @@ PDF: [read](http://xeroxmobileprint.net/DiscoveryTable/test/folder1/Domain-Drive
 ___
 # What is DDD
 
+Object Oriented Design - is a set of principles and schemes for creating optimal systems of objects. The DDD can halp with this. 
+
 DDD is not about developming, this is about developing knowledge around the business and using the technology to provide value. 
 DDD is not about technology, is actually about providing value in the field you are working on, by focusing on model.
 DDD is not a silver bullet for every problem in Software, and highly depends on the amount of complexity you are dealing with.
@@ -149,6 +151,20 @@ Entity – this is value object with identity. For example: Order, Person. Can e
 
 Entities are mutable, and as such this could lead to undesirable side-effects occurring in the Value Object.
 
+
+## Aggregation 
+
+Aggregates are the basic element of transfer of data storage. An aggregate will have one of its component objects be the aggregate root. Example Car and car details. Also we can detect a rood Aggregate, usualy this is  aggregate with most Entity and VO.
+
+## Repository 
+
+Repository – this is storage for data. But not a DAO. Typically a DAO would contain CRUD methods for a particular domain object. And Repository more short. Repositories save and retrieve Entities or Aggregates to or from the underlying storage mechanism. Repositories can use DAOs(Data Access Objects) for retrieving data and to encapsulate database specific logic from the domain.
+
+## Service 
+
+## Factory 
+
+Factory – pattern from GOF. Defines an interface for creating an object.
 
 ### Bounded contexts
 
