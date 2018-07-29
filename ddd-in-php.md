@@ -14,17 +14,17 @@ ___
 [What is DDD](#DDD)  
 [What DDD giver for us](#DDD2)  
 [Layered Architecture](#LayeredArchitecture)  
-[User Interface Layer](#UserInterfaceLayer)  
-[Application Layer](#ApplicationLayer)  
-[Domain Layer](#DomainLayer)  
-[Infrastructure Layer](#InfrastructureLayer)  
+[ - User Interface Layer](#UserInterfaceLayer)  
+[ - Application Layer](#ApplicationLayer)  
+[ - Domain Layer](#DomainLayer)  
+[ - Infrastructure Layer](#InfrastructureLayer)  
 [DDD Conponents](#DDDConponents)  
-[- DTO](#DTO)  
-[- Value Objects (VO)](#VO)  
-[- Embedded Value](#EmbeddedValue)  
-[- Entity](#Entity)  
-[--- Anemic Domain Model](#AnemicDomainModel)  
-[--- Rich Domain Model](#RichDomainModel)  
+[ - DTO](#DTO)  
+[ - Value Objects (VO)](#VO)  
+[ - Embedded Value](#EmbeddedValue)  
+[ - Entity](#Entity)  
+[    --- Anemic Domain Model](#AnemicDomainModel)  
+[    --- Rich Domain Model](#RichDomainModel)  
 [- NEXT](#NEXT)  
 
 
@@ -48,7 +48,7 @@ If your application has less than 30 use-cases, it might be simpler to use a fra
 
 3) Tactical Design: Help for separate logic layer from code. And split the program into layers. The main units in DDD there is – Value Object, Entity, Repository, Service, Aggregation, Factory…
 
-# <a name="LayeredArchitecture"><h2>Layered Architecture</h2></a>
+# <a name="LayeredArchitecture"><h1>Layered Architecture</h1></a>
 
 From the code maintainability and reuse perspectives, the best way to make this code a bit easier to maintain would be splitting up concepts - creating layers for each different concern.
 
