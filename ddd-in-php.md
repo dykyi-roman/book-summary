@@ -21,8 +21,10 @@ If your application has less than 30 use-cases, it might be simpler to use a fra
 ## What DDD giver for us
 
 1)Ubiquitous Language: Developers and domain experts team up to build the knowledge base by sharing the same language.
+
 2) Strategic Design: Domain-Driven Design addresses the strategy behind the direction of the business, not just the technical aspects. It helps define the internal relationships and early warning feedback systems.
-3)Tactical Design: Help for separate logic layer from code. And split the program into layers. The main units in DDD there is – Value Object, Entity, Repository, Service, Aggregation, Factory…
+
+3) Tactical Design: Help for separate logic layer from code. And split the program into layers. The main units in DDD there is – Value Object, Entity, Repository, Service, Aggregation, Factory…
 
 ### Layered Architecture
 
