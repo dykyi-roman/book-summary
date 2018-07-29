@@ -18,10 +18,10 @@ ___
 [Application Layer](#ApplicationLayer)  
 [Domain Layer](#DomainLayer)  
 [Infrastructure Layer](#InfrastructureLayer)  
-[DDDConponents](#DDD Components)  
+[DDD Conponents](#DDDComponents)  
 [- DTO](#DTO)  
-[- Value Objects (VO)](#VO) 
-[- Embedded Value](#EmbeddedValue)
+[- Value Objects (VO)](#VO)  
+[- Embedded Value](#EmbeddedValue)  
 [- Entity](#Entity)  
 
 ___
