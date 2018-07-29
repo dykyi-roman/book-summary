@@ -23,6 +23,11 @@ ___
 [- Value Objects (VO)](#VO)  
 [- Embedded Value](#EmbeddedValue)  
 [- Entity](#Entity)  
+[  - Anemic Domain Model](#AnemicDomainModel)  
+[  - Rich Domain Model](#RichDomainModel)  
+[- NEXT](#NEXT)  
+
+
 
 ___
 # <a name="DDD"><h1>What is DDD</h1></a>
@@ -146,7 +151,7 @@ Modelled as a Value Object if:
 
 It is also good to point out that it is not recommended to hold references to entities in your Value Objects.
 
-Can has a validation logic.
+Must has a validation logic. Book good describe how make validate(LocationValidationHandler $validationHandler) method. 
 
 Value Objects are not persisted on their own, they are typically persisted within an Aggregate.
 
@@ -154,7 +159,7 @@ Value Objects should not be persisted as complete records, though it is an optio
 
 Another interesting detail about modeling your Domain concepts using Value Objects is about its security benefits.
 
-## <a name="EmbeddedValue"><h2>Embedded Value)</h2></a> 
+## <a name="EmbeddedValue"><h2>Embedded Value</h2></a> 
 
 Many small objects make sense in an OO system that don't make sense as tables in a database. Examples include currency-aware money objects and date ranges. Although the default thinking is to save an object as a table, no sane person would want a table of money values. An Embedded Value maps the values of an object to fields in the record of the object's owner.
 
@@ -164,8 +169,21 @@ Entity – this is value object with identity. For example: Order, Person. Can e
 
 Entities are mutable, and as such this could lead to undesirable side-effects occurring in the Value Object.
 
+Entire object validation: Extracting the validation to an external service is a good practice.
 
+Object compositions: Complex object compositions could be validated through Domain Services. A good way of communicating this to the rest of the application is through Domain Events.
 
+If the client cannot provide the identity generally the preferred way to handle the identity operation is to let the application generate the identities, usually through a UUID. The best recommended would be the one developed by Ben Ramsey at https://github.com/ramsey/uuid
+
+### <a name="AnemicDomainModel"><h3>Anemic Domain Model</h3></a>  
+
+Anemic Domain Model - anti-patterns. Has only getters and setters. This is not have a logic inside and have a service that include logic. This is comes for us from procedure delelop style. This approach broken basic idea of Object Oriented Design, which consists in the combination of data and process (behavior). Often, these domain objects come with architectural rules not to place any domain logic in them.
+
+### <a name="RichDomainModel"><h3>Rich Domain Model</h3></a>  
+
+Rich Domain Model is a model with a state and behavior (business logic).
+
+The logic that should be in the domain object is domain logic, for example: validation, calculations, or whatever you call "business rules". Many post logic in services forms(build) this service layer. But this is not a variant.
 
 ## Aggregation 
 
@@ -175,7 +193,7 @@ Aggregates are the basic element of transfer of data storage. An aggregate will 
 
 Repository – this is storage for data. But not a DAO. Typically a DAO would contain CRUD methods for a particular domain object. And Repository more short. Repositories save and retrieve Entities or Aggregates to or from the underlying storage mechanism. Repositories can use DAOs(Data Access Objects) for retrieving data and to encapsulate database specific logic from the domain.
 
-## Service 
+## Services 
 
 ## Factory 
 
