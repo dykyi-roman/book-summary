@@ -10,7 +10,22 @@ Github: https://github.com/dddinphp
 
 PDF: [read](http://xeroxmobileprint.net/DiscoveryTable/test/folder1/Domain-Driven_Design_in_PHP.pdf)
 ___
-# What is DDD
+##### Содержание  
+[What is DDD](#DDD)  
+[What DDD giver for us](#DDD2)  
+[Layered Architecture](#LayeredArchitecture)  
+[User Interface Layer](#UserInterfaceLayer)  
+[Application Layer](#ApplicationLayer)  
+[Domain Layer](#DomainLayer)  
+[Infrastructure Layer](#InfrastructureLayer)  
+[DDDConponents](#DDD Components)  
+[- DTO](#DTO)  
+[- Value Objects (VO)](#VO) 
+[- Embedded Value](#EmbeddedValue)
+[- Entity](#Entity)  
+
+___
+# <a name="DDD"><h1>What is DDD</h1></a>
 
 Object Oriented Design - is a set of principles and schemes for creating optimal systems of objects. The DDD can halp with this. 
 
@@ -20,7 +35,7 @@ DDD is not a silver bullet for every problem in Software, and highly depends on 
 DDD is not a good desigin if you have only CRUD application. But If your product like a snowball, then DDD will be able to help you.
 If your application has less than 30 use-cases, it might be simpler to use a framework like Symfony or Laravel to handle your business logic.
 
-## What DDD giver for us
+## <a name="DDD2"><h2>What DDD giver for us</h2></a>
 
 1)Ubiquitous Language: Developers and domain experts team up to build the knowledge base by sharing the same language.
 
@@ -28,14 +43,14 @@ If your application has less than 30 use-cases, it might be simpler to use a fra
 
 3) Tactical Design: Help for separate logic layer from code. And split the program into layers. The main units in DDD there is – Value Object, Entity, Repository, Service, Aggregation, Factory…
 
-# Layered Architecture
+# <a name="LayeredArchitecture"><h2>Layered Architecture</h2></a>
 
 From the code maintainability and reuse perspectives, the best way to make this code a bit easier to maintain would be splitting up concepts - creating layers for each different concern.
 
-## User Interface Layer
+## <a name="UserInterfaceLayer"><h2>User Interface Layer</h2></a>
 The Client Layer consumes Application Services and invokes business logic on these services. Every invocation is a new transaction.
 
-## Application Layer
+## <a name="ApplicationLayer"><h2>Application Layer</h2></a>
 The Application Layer takes commands from the User Interface Layer and translates these commands to use case invocations on the domain layer. The Application Layer also provides transaction control for business operations. 
 Include:
 
@@ -45,8 +60,7 @@ Include:
 
 • Event
 
-
-## Domain Layer
+## <a name="Domainayer"><h2>Domain Layer</h2></a>
 The Domain Layer contains the real business logic, but does not contain any infrastructure specific code. The infrastructure specific implementation is provided by the Infrastructure Layer. Include:
 
 • Aggregate
@@ -84,8 +98,7 @@ So far we’ve covered the following sections of the Domain layer:
 
 •	Creating your own Domain Event Dispatcher
 
-
-## Infrastructure Layer
+## <a name="InfrastructureLayer"><h2>Infrastructure Layer</h2></a>
 The Infrastructure Layer provides the infrastructure dependent parts for all other layers. This is up to you, as long the storage provides transaction control and guarantees consistency.  Include:
 
 • DTO
@@ -97,9 +110,9 @@ The Infrastructure Layer provides the infrastructure dependent parts for all oth
 • Mailer
 
 
-# DDD conponents
+# <a name="DDDConponents"><h1>DDD Conponents</h1></a>
 
-## DTO
+## <a name="DTO"><h2>DTO</h2></a>
 
 DTO – object which nothing exist inside. No methods. No logics. Must do it only simple data type.
 
@@ -107,7 +120,7 @@ Usually DTO write for each services because adaptation him for other service wil
 
 Why create a DTO instead of giving an instance of the Model to the View layer? The main reason and the short answer is, again, Separation of Concerns.  Letting the view inspect and use a Model instance leads to tight coupling between the View layer and the Model layer. In fact, a change in the Model layer can potentially break all the views that make use of the changed Model instances.
 
-## Value Objects (VO) 
+## <a name="VO"><h2>Value Objects (VO)</h2></a>
 
 Value Objects are a fundamental building block in Domain-Driven Design, used to model concepts of your Ubiquitous Language in code. They can be seen as small, simple objects such as money or a date range. 
 
@@ -141,15 +154,17 @@ Value Objects should not be persisted as complete records, though it is an optio
 
 Another interesting detail about modeling your Domain concepts using Value Objects is about its security benefits.
 
-## Embedded Value
+## <a name="EmbeddedValue"><h2>Embedded Value)</h2></a> 
 
+Many small objects make sense in an OO system that don't make sense as tables in a database. Examples include currency-aware money objects and date ranges. Although the default thinking is to save an object as a table, no sane person would want a table of money values. An Embedded Value maps the values of an object to fields in the record of the object's owner.
 
-
-## Entity 
+## <a name="Entity"><h2>Entity)</h2></a>  
 
 Entity – this is value object with identity. For example: Order, Person. Can exist in self a Value Object.
 
 Entities are mutable, and as such this could lead to undesirable side-effects occurring in the Value Object.
+
+
 
 
 ## Aggregation 
