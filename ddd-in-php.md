@@ -23,8 +23,8 @@ ___
 [ - Value Objects (VO)](#VO)  
 [ - Embedded Value](#EmbeddedValue)  
 [ - Entity](#Entity)  
-[    --- Anemic Domain Model](#AnemicDomainModel)  
-[    --- Rich Domain Model](#RichDomainModel)  
+[    ⋅⋅⋅Anemic Domain Model](#AnemicDomainModel)  
+[    ⋅⋅⋅Rich Domain Model](#RichDomainModel)  
 [- NEXT](#NEXT)  
 
 
