@@ -6,3 +6,5 @@ Description: It is about object-oriented programming from an idealistic and, may
 Web[en]: ~
 
 ____
+
+https://rukeba.com/by-the-way/elegant-objects/
