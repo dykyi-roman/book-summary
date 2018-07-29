@@ -175,11 +175,11 @@ Object compositions: Complex object compositions could be validated through Doma
 
 If the client cannot provide the identity generally the preferred way to handle the identity operation is to let the application generate the identities, usually through a UUID. The best recommended would be the one developed by Ben Ramsey at https://github.com/ramsey/uuid
 
-### <a name="AnemicDomainModel"><h3>Anemic Domain Model</h3></a>  
+### <a name="AnemicDomainModel"><h4>Anemic Domain Model</h4></a>  
 
 Anemic Domain Model - anti-patterns. Has only getters and setters. This is not have a logic inside and have a service that include logic. This is comes for us from procedure delelop style. This approach broken basic idea of Object Oriented Design, which consists in the combination of data and process (behavior). Often, these domain objects come with architectural rules not to place any domain logic in them.
 
-### <a name="RichDomainModel"><h3>Rich Domain Model</h3></a>  
+### <a name="RichDomainModel"><h4>Rich Domain Model</h4></a>  
 
 Rich Domain Model is a model with a state and behavior (business logic).
 
@@ -188,6 +188,10 @@ The logic that should be in the domain object is domain logic, for example: vali
 ## Aggregation 
 
 Aggregates are the basic element of transfer of data storage. An aggregate will have one of its component objects be the aggregate root. Example Car and car details. Also we can detect a rood Aggregate, usualy this is  aggregate with most Entity and VO.
+
+Aggregates is combined together Entity. One Entity can has a other VO.
+
+
 
 ## Repository 
 
