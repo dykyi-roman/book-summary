@@ -107,6 +107,47 @@ Why create a DTO instead of giving an instance of the Model to the View layer? T
 
 ## Value Objects (VO) 
 
+Value Objects are a fundamental building block in Domain-Driven Design, used to model concepts of your Ubiquitous Language in code. They can be seen as small, simple objects such as money or a date range. 
+
+Value Objects are immutable, so they cannot be modified, they cannot change their state. Every state changing method returns a new instance of the value Object.
+
+Value objects can have methods, but the behavior of a method doesn’t ever change the object’s state. If a method needs to change a property, it will return a brand new instance of the value object instead of modifying the existing one.
+
+Value Objects are easier to create, test, use and maintain.
+
+Modelled as a Value Object if: 
+
+• It measures, quantifies, or describes a thing in the domain
+
+• It can be kept immutable
+
+• It models a conceptual whole, by composing related attributes as an integral unit
+
+• It is completely replaceable when the measurement or description changes
+
+• It can be compared with others through value equality
+
+• It supplies its collaborators with Side-Effect-Free behaviour
+
+It is also good to point out that it is not recommended to hold references to entities in your Value Objects.
+
+Can has a validation logic.
+
+Value Objects are not persisted on their own, they are typically persisted within an Aggregate.
+
+Value Objects should not be persisted as complete records, though it is an option in some cases. Instead it is best to use Embedded Value. As Value Objects are small, Embedded Value is usually the best choice to persis data to ORM. OR Doctrine Custom Types.
+
+Another interesting detail about modeling your Domain concepts using Value Objects is about its security benefits.
+
+## Embedded Value
+
+
+
+## Entity 
+
+Entity – this is value object with identity. For example: Order, Person. Can exist in self a Value Object.
+
+Entities are mutable, and as such this could lead to undesirable side-effects occurring in the Value Object.
 
 
 ### Bounded contexts
