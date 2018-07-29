@@ -26,14 +26,14 @@ If your application has less than 30 use-cases, it might be simpler to use a fra
 
 3) Tactical Design: Help for separate logic layer from code. And split the program into layers. The main units in DDD there is – Value Object, Entity, Repository, Service, Aggregation, Factory…
 
-### Layered Architecture
+# Layered Architecture
 
 From the code maintainability and reuse perspectives, the best way to make this code a bit easier to maintain would be splitting up concepts - creating layers for each different concern.
 
-#### User Interface Layer
+## User Interface Layer
 The Client Layer consumes Application Services and invokes business logic on these services. Every invocation is a new transaction.
 
-#### Application Layer
+## Application Layer
 The Application Layer takes commands from the User Interface Layer and translates these commands to use case invocations on the domain layer. The Application Layer also provides transaction control for business operations. 
 Include:
 
@@ -44,7 +44,7 @@ Include:
 • Event
 
 
-#### Domain Layer
+## Domain Layer
 The Domain Layer contains the real business logic, but does not contain any infrastructure specific code. The infrastructure specific implementation is provided by the Infrastructure Layer. Include:
 
 • Aggregate
@@ -83,7 +83,7 @@ So far we’ve covered the following sections of the Domain layer:
 •	Creating your own Domain Event Dispatcher
 
 
-#### Infrastructure Layer
+## Infrastructure Layer
 The Infrastructure Layer provides the infrastructure dependent parts for all other layers. This is up to you, as long the storage provides transaction control and guarantees consistency.  Include:
 
 • DTO
@@ -93,6 +93,9 @@ The Infrastructure Layer provides the infrastructure dependent parts for all oth
 • Service
 
 • Mailer
+
+
+# DDD conponents
 
 ## DTO
 
