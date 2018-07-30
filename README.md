@@ -9,9 +9,14 @@ Here I will publish a short summary of books and article that I read.
 ____
 My rules:
 
+* Do not create DTO for DTO, VO for VO, Service for Service... Any object should be created to solve a problem.
+
+* Do not use go-to. http://david.tribble.com/text/goto.html#example-e-1
+
 * Repeat code is - OK, repeat logig is NOT ok.
+
 * The code must be checked a SOLID principle after code-review (Uncle Bob)
+
 * Code-review must be doing before manual test
+
 * Object must be transfer for another (low coupling principle)
-
-
