@@ -8,3 +8,4 @@ Web[en]: ~
 ____
 
 https://rukeba.com/by-the-way/elegant-objects/
+https://adorow.github.io/blog/2017/05/28/elegant-objects-volume-1-review-chapter-1
