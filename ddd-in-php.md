@@ -28,7 +28,9 @@ ___
 [Aggregation](#Aggregation)  
 [Repository](#Repository)  
 [Services](#Services)  
-
+[ - Application](#Application)  
+[ - Domain](#Domain)  
+[ - Infrastructure](#Infrastructure)  
 ___
 # <a name="DDD"><h1>What is DDD</h1></a>
 
@@ -155,6 +157,10 @@ Must has a validation logic. Book good describe how make validate(LocationValida
 
 Value Objects are not persisted on their own, they are typically persisted within an Aggregate.
 
+Not recommended save a reference for another object.
+
+For a comparison, a VO property must be a equals() method.
+
 Value Objects should not be persisted as complete records, though it is an option in some cases. Instead it is best to use Embedded Value. As Value Objects are small, Embedded Value is usually the best choice to persis data to ORM. OR Doctrine Custom Types.
 
 Another interesting detail about modeling your Domain concepts using Value Objects is about its security benefits.
@@ -167,11 +173,15 @@ Many small objects make sense in an OO system that don't make sense as tables in
 
 Entity – this is value object with identity. For example: Order, Person. Can exist in self a Value Object.
 
+Surrogate Identity - This is a situation when part of fields take from inheritance Entity class.
+
 Entities are mutable, and as such this could lead to undesirable side-effects occurring in the Value Object.
 
 Entire object validation: Extracting the validation to an external service is a good practice.
 
 Object compositions: Complex object compositions could be validated through Domain Services. A good way of communicating this to the rest of the application is through Domain Events.
+
+Use a validation inside an Entity is anti-pattern. Better use a VO or Validation service use inject Entity inside.
 
 If the client cannot provide the identity generally the preferred way to handle the identity operation is to let the application generate the identities, usually through a UUID. The best recommended would be the one developed by Ben Ramsey at https://github.com/ramsey/uuid
 
@@ -191,7 +201,9 @@ The logic that should be in the domain object is domain logic, for example: vali
 
 ## <a name="Aggregation"><h2>Aggregation</h2></a>  
 
-Aggregates are the basic element of transfer of data storage. An aggregate will have one of its component objects be the aggregate root. Example Car and car details. Also we can detect a rood Aggregate, usualy this is  aggregate with most Entity and VO.
+Aggregates are the basic element of transfer of data storage (Repository). An aggregate will have one of its component objects be the aggregate root. Example Car and car details. Also we can detect a rood Aggregate, usualy this is  aggregate with most Entity and VO.
+
+Aggregates can only be associated with identifiers. They can not share any other data with each other. 
 
 Aggregates is combined together Entity. One Entity can has a other VO.
 
@@ -208,15 +220,27 @@ If we generate excaption on the Service layer we must cathc this excaption on th
 
 There are typically three different types of service which you will encounter, these are: Application, Domain, Infrastructure. 
 
-### Application
+### <a name="Application"><h4>Application</h4></a>  
 
 Application services are the middleware between the outside world and the domain logic. The purpose of such a mechanism is to transform commands from the outside world into meaningful domain instructions.
 
-In Domain-Driven Design, transactions are handled at the Application Service level. Y
+In Domain-Driven Design, transactions are handled at the Application Service level.
 
-### Domain
+First one is that Application Services should not include such business logic.
 
-Throughout conversations with domain experts, you will come across concepts in the Ubiquitous Language that cannot be neatly represented as either an Entity or Value. A domain service can be defined as an operation that doing a domain task and we can not put into an Entity or a Value Object. Domain services don’t hold any kind of state by themselves.
+Example: Command Bus, Controller(MVC) or Transaction layer.
+
+### <a name="Domain"><h4>Domain</h4></a>  
+
+Throughout conversations with domain experts, you will come across concepts in the Ubiquitous Language that cannot be neatly represented as either an Entity or Value. A domain service can be defined as an operation that doing a domain task and we can not put into an Entity or a Value Object.
+
+Domain services work with domain types.
+
+Domain services don’t hold any kind of state by themselves.
+
+### <a name="Infrastructure"><h4>Infrastructure</h4></a> 
+
+Example: Mailler, Logger....
 
 ## Factory 
 
