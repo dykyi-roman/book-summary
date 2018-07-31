@@ -19,4 +19,4 @@ My rules:
 
 * Code-review must be doing before manual test
 
-* Object must be transfer for another (low coupling principle)
+* Object must be transfer for another layer using DTO (low coupling principle)
