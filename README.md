@@ -21,4 +21,4 @@ My rules:
 
 * Object must be transfer for another layer using DTO (low coupling principle)
 
-* Talk with a Domain layer using CommandBus and talk with a UI layer using Query Bus. One comand => one Handler (SRP)
+* Talk with a Domain layer using CommandBus and talk with a UI layer using Query Bus. Comand => CommandHandler (SRP)
