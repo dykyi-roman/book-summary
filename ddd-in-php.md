@@ -25,9 +25,9 @@ ___
 [ - Entity](#Entity)  
 [    ⋅⋅⋅Anemic Domain Model](#AnemicDomainModel)  
 [    ⋅⋅⋅Rich Domain Model](#RichDomainModel)  
-[- NEXT](#NEXT)  
-
-
+[Aggregation](#Aggregation)  
+[Repository](#Repository)  
+[Services](#Services)  
 
 ___
 # <a name="DDD"><h1>What is DDD</h1></a>
@@ -189,19 +189,17 @@ Rich Domain Model is a model with a state and behavior (business logic).
 
 The logic that should be in the domain object is domain logic, for example: validation, calculations, or whatever you call "business rules". Many post logic in services forms(build) this service layer. But this is not a variant.
 
-## Aggregation 
+## <a name="Aggregation"><h2>Aggregation</h2></a>  
 
 Aggregates are the basic element of transfer of data storage. An aggregate will have one of its component objects be the aggregate root. Example Car and car details. Also we can detect a rood Aggregate, usualy this is  aggregate with most Entity and VO.
 
 Aggregates is combined together Entity. One Entity can has a other VO.
 
-
-
-## Repository 
+## <a name="Repository"><h2>Repository</h2></a>   
 
 Repository – this is storage for data. But not a DAO. Typically a DAO would contain CRUD methods for a particular domain object. And Repository more short. Repositories save and retrieve Entities or Aggregates to or from the underlying storage mechanism. Repositories can use DAOs(Data Access Objects) for retrieving data and to encapsulate database specific logic from the domain.
 
-## Services 
+## <a name="Services"><h2>Services</h2></a>   
 
 Service - this is entry point for a work with Domain. Do not write universal Service (SRP). Service must resurn a DTO. 
 For create service layer in common using a Command Bus. 
