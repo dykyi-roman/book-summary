@@ -119,7 +119,7 @@ The Infrastructure Layer provides the infrastructure dependent parts for all oth
 
 ## <a name="DTO"><h2>DTO</h2></a>
 
-DTO – object which nothing exist inside. No methods. No logics. Must do it only simple data type.
+DTO – object which nothing exist inside. No methods. No logics. Must do it only simple data type. One DTO for one Service becouse for Rest you need one data and for a UI you need orther.
 
 Usually DTO write for each services because adaptation him for other service will be difficult. For example data for needed to a REST and UI its not the same data. 
 
@@ -177,7 +177,11 @@ If the client cannot provide the identity generally the preferred way to handle 
 
 ### <a name="AnemicDomainModel"><h4>Anemic Domain Model</h4></a>  
 
-Anemic Domain Model - anti-patterns. Has only getters and setters. This is not have a logic inside and have a service that include logic. This is comes for us from procedure delelop style. This approach broken basic idea of Object Oriented Design, which consists in the combination of data and process (behavior). Often, these domain objects come with architectural rules not to place any domain logic in them.
+Anemic Domain Model Breaks Encapsulation. Anemic Domain Model Brings a False Sense of Code Reuse. 
+
+Anemic Domain Model - anti-patterns. Has only getters and setters. This is not have a logic inside and have a service that include logic. 
+
+This is comes for us from procedure delelop style. This approach broken basic idea of Object Oriented Design, which consists in the combination of data and process (behavior). Often, these domain objects come with architectural rules not to place any domain logic in them.
 
 ### <a name="RichDomainModel"><h4>Rich Domain Model</h4></a>  
 
@@ -199,6 +203,23 @@ Repository – this is storage for data. But not a DAO. Typically a DAO would co
 
 ## Services 
 
+Service - this is entry point for a work with Domain. Do not write universal Service (SRP). Service must resurn a DTO. 
+For create service layer in common using a Command Bus. 
+
+If we generate excaption on the Service layer we must cathc this excaption on this layer to.
+
+There are typically three different types of service which you will encounter, these are: Application, Domain, Infrastructure. 
+
+### Application
+
+Application services are the middleware between the outside world and the domain logic. The purpose of such a mechanism is to transform commands from the outside world into meaningful domain instructions.
+
+In Domain-Driven Design, transactions are handled at the Application Service level. Y
+
+### Domain
+
+Throughout conversations with domain experts, you will come across concepts in the Ubiquitous Language that cannot be neatly represented as either an Entity or Value. A domain service can be defined as an operation that doing a domain task and we can not put into an Entity or a Value Object. Domain services don’t hold any kind of state by themselves.
+
 ## Factory 
 
 Factory – pattern from GOF. Defines an interface for creating an object.
@@ -206,7 +227,6 @@ Factory – pattern from GOF. Defines an interface for creating an object.
 ### Bounded contexts
 
 A very important part of DDD is bounded contexts. The architecture of a Domain Driven Design project is comprised of three main areas. Each areas has it’s own unique role and responsibilities within the bigger context of the entire application. 
-
 
 
 # Hexagonal Architecture
