@@ -31,6 +31,7 @@ ___
 [ - Application](#Application)  
 [ - Domain](#Domain)  
 [ - Infrastructure](#Infrastructure)  
+[Specification Pattern](#SpecificationPattern)  
 ___
 # <a name="DDD"><h1>What is DDD</h1></a>
 
@@ -209,7 +210,17 @@ Aggregates is combined together Entity. One Entity can has a other VO.
 
 ## <a name="Repository"><h2>Repository</h2></a>   
 
-Repository – this is storage for data. But not a DAO. Typically a DAO would contain CRUD methods for a particular domain object. And Repository more short. Repositories save and retrieve Entities or Aggregates to or from the underlying storage mechanism. Repositories can use DAOs(Data Access Objects) for retrieving data and to encapsulate database specific logic from the domain.
+Repository as the mechanism between the domain and data mapping layers, acting like an in-memory domain object collection.
+
+Repository – this is storage for data(collection), but not a DAO. Data Access Objects are a common pattern for persisting domain objects into the database. The significant difference being that Repositories represent collections, whilst DAOs are closer to the database, often being far more table-centric. Typically a DAO would contain CRUD methods for a particular domain object, repository is more short. The main problem with DAOs is that their responsibilities are not clearly defined. DAOs are usually perceived as a gateway to the database.
+
+From the collections point of view there is no need for a save method in the repository. But if you do not have a unit of work, keeping track of Aggregate changes is a difficult task you can add save method.
+
+Repositories save and retrieve Entities or Aggregates to or from the underlying storage mechanism. Repositories can use DAOs(Data Access Objects) for retrieving data and to encapsulate database specific logic from the domain.
+
+Good practic use RepositoryInterface and implement them for esy change Repository to (Redis, InMemory, Doctrine...).
+
+Doctrine use a Data Mapper pattern and use Doctrine Query Language.
 
 ## <a name="Services"><h2>Services</h2></a>   
 
@@ -241,6 +252,18 @@ Domain services don’t hold any kind of state by themselves.
 ### <a name="Infrastructure"><h4>Infrastructure</h4></a> 
 
 Example: Mailler, Logger....
+
+## <a name="SpecificationPattern"><h2>Specification Pattern</h2></a> 
+
+A common implementation for the criterion object is the Specification Pattern. A specification is just a simple predicate that takes a domain object and returns a boolean. Given a domain object, it will return true if it specifies the specification and false otherwise.
+
+The Specification object has a single public isSatisfiedBy() method that will return a boolean value
+
+By using The Specification Pattern, you can use the Specification Object anywhere that is necessary in your application. Your application does not need to know how the business rule is enforced because it is internal to the Specification object. If the business rules is changed, you only have to change that single source of truth.
+
+Using The Specification Pattern also makes having alternative, or multiple rules easier to work with. By encapsulating each rule as a Specification object you are free to use many instances together to satisfy the complex requirements of the organisation without getting bogged down in complex or unmaintainable code.
+
+Not needed in Services.
 
 ## Factory 
 
