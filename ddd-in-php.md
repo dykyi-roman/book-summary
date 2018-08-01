@@ -25,13 +25,16 @@ ___
 [ - Entity](#Entity)  
 [    ⋅⋅⋅Anemic Domain Model](#AnemicDomainModel)  
 [    ⋅⋅⋅Rich Domain Model](#RichDomainModel)  
-[Aggregation](#Aggregation)  
-[Repository](#Repository)  
-[Services](#Services)  
-[ - Application](#Application)  
-[ - Domain](#Domain)  
-[ - Infrastructure](#Infrastructure)  
+[ - Aggregation](#Aggregation)  
+[ - Repository](#Repository)  
+[ - Services](#Services)  
+[   ⋅⋅⋅ Application](#Application)  
+[   ⋅⋅⋅ Domain](#Domain)  
+[   ⋅⋅⋅ Infrastructure](#Infrastructure)  
 [Specification Pattern](#SpecificationPattern)  
+[Factory](#Factory)  
+[Bounded Contexts](#BoundedContexts)  
+
 ___
 # <a name="DDD"><h1>What is DDD</h1></a>
 
@@ -253,7 +256,7 @@ Domain services don’t hold any kind of state by themselves.
 
 Example: Mailler, Logger....
 
-## <a name="SpecificationPattern"><h2>Specification Pattern</h2></a> 
+## <a name="SpecificationPattern"><h1>Specification Pattern</h1></a> 
 
 A common implementation for the criterion object is the Specification Pattern. A specification is just a simple predicate that takes a domain object and returns a boolean. Given a domain object, it will return true if it specifies the specification and false otherwise.
 
@@ -265,11 +268,13 @@ Using The Specification Pattern also makes having alternative, or multiple rules
 
 Not needed in Services.
 
-## Factory 
+Read more: https://www.culttt.com/2014/08/25/implementing-specification-pattern/
+
+## <a name="Factory"><h1>Factory</h1></a>  
 
 Factory – pattern from GOF. Defines an interface for creating an object.
 
-### Bounded contexts
+## <a name="BoundedContexts"><h1>Bounded Contexts</h1></a>
 
 A very important part of DDD is bounded contexts. The architecture of a Domain Driven Design project is comprised of three main areas. Each areas has it’s own unique role and responsibilities within the bigger context of the entire application. 
 
