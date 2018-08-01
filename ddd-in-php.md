@@ -13,6 +13,7 @@ ___
 ##### Содержание  
 [What is DDD](#DDD)  
 [What DDD giver for us](#DDD2)  
+[What is Domain](#Domain)  
 [Layered Architecture](#LayeredArchitecture)  
 [ - User Interface Layer](#UserInterfaceLayer)  
 [ - Application Layer](#ApplicationLayer)  
@@ -20,6 +21,7 @@ ___
 [ - Infrastructure Layer](#InfrastructureLayer)  
 [DDD Conponents](#DDDConponents)  
 [ - DTO](#DTO)  
+[ - Transformers](#Transformers)  
 [ - Value Objects (VO)](#VO)  
 [ - Embedded Value](#EmbeddedValue)  
 [ - Entity](#Entity)  
@@ -41,9 +43,13 @@ ___
 Object Oriented Design - is a set of principles and schemes for creating optimal systems of objects. The DDD can halp with this. 
 
 DDD is not about developming, this is about developing knowledge around the business and using the technology to provide value. 
+
 DDD is not about technology, is actually about providing value in the field you are working on, by focusing on model.
+
 DDD is not a silver bullet for every problem in Software, and highly depends on the amount of complexity you are dealing with.
+
 DDD is not a good desigin if you have only CRUD application. But If your product like a snowball, then DDD will be able to help you.
+
 If your application has less than 30 use-cases, it might be simpler to use a framework like Symfony or Laravel to handle your business logic.
 
 ## <a name="DDD2"><h2>What DDD giver for us</h2></a>
@@ -53,6 +59,10 @@ If your application has less than 30 use-cases, it might be simpler to use a fra
 2) Strategic Design: Domain-Driven Design addresses the strategy behind the direction of the business, not just the technical aspects. It helps define the internal relationships and early warning feedback systems.
 
 3) Tactical Design: Help for separate logic layer from code. And split the program into layers. The main units in DDD there is – Value Object, Entity, Repository, Service, Aggregation, Factory…
+
+# <a name="Domain"><h1>What is Domain</h1></a>
+
+Everyone is take part in the process of opening a domain, developers and teams of domain experts to build a knowledge base by sharing a single language. Domain experts will have to work closely with developers, and developers will have to think from the point of view of business.
 
 # <a name="LayeredArchitecture"><h1>Layered Architecture</h1></a>
 
@@ -130,6 +140,18 @@ DTO – object which nothing exist inside. No methods. No logics. Must do it onl
 Usually DTO write for each services because adaptation him for other service will be difficult. For example data for needed to a REST and UI its not the same data. 
 
 Why create a DTO instead of giving an instance of the Model to the View layer? The main reason and the short answer is, again, Separation of Concerns.  Letting the view inspect and use a Model instance leads to tight coupling between the View layer and the Model layer. In fact, a change in the Model layer can potentially break all the views that make use of the changed Model instances.
+
+## <a name="Transformers"><h2>Transformers</h2></a>
+
+Transformers allow us to separate the view from the concept of the domain. 
+
+Basically, transformers give you the flexibility to create a format response that you need (Example in JSON). By using transformers we can also do type casting, pagination results, and also nest relationships. 
+
+There are some cases when intermediate DTOs are created for more complex responses, from JSON, XML, CSV, iCAL format conversion.
+
+1 Example: https://fractal.thephpleague.com/transformers/
+
+2 Example: https://medium.com/@haydar_ai/how-to-start-using-transformers-in-laravel-4ff0158b325f
 
 ## <a name="VO"><h2>Value Objects (VO)</h2></a>
 
@@ -221,6 +243,8 @@ From the collections point of view there is no need for a save method in the rep
 
 Repositories save and retrieve Entities or Aggregates to or from the underlying storage mechanism. Repositories can use DAOs(Data Access Objects) for retrieving data and to encapsulate database specific logic from the domain.
 
+Good practic use a specification. You can write the function query($specification) and change the result of the sample by passing various input specifications.
+
 Good practic use RepositoryInterface and implement them for esy change Repository to (Redis, InMemory, Doctrine...).
 
 Doctrine use a Data Mapper pattern and use Doctrine Query Language.
@@ -277,7 +301,6 @@ Factory – pattern from GOF. Defines an interface for creating an object.
 ## <a name="BoundedContexts"><h1>Bounded Contexts</h1></a>
 
 A very important part of DDD is bounded contexts. The architecture of a Domain Driven Design project is comprised of three main areas. Each areas has it’s own unique role and responsibilities within the bigger context of the entire application. 
-
 
 # Hexagonal Architecture
 Port is a connector with a pluggable Adapter which transforms an outside input to something the inside application can understand. In terms of the DIP, the Port would be a high level module and an Adapter would be a low level module. Fu
