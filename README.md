@@ -23,6 +23,8 @@ My rules:
 
 * Talk with a Domain layer using CommandBus and talk with a UI layer using Query Bus. Comand => Handler (SRP)
 
+* Do not use a Traits
+
 * All class is final. All properti and method private by default. 
 
 * Do not use a option dependencies, better put DI in controller. 
