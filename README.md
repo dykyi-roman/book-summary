@@ -22,3 +22,12 @@ My rules:
 * Object must be transfer for another layer using DTO (low coupling principle)
 
 * Talk with a Domain layer using CommandBus and talk with a UI layer using Query Bus. Comand => Handler (SRP)
+
+* All class is final. All properti and method private by default. 
+
+* Do not use a option dependencies, better put DI in controller. 
+
+* Do not use a option swich param in function. Example: setActive($active = true)
+
+
+
