@@ -75,11 +75,15 @@ The Client Layer consumes Application Services and invokes business logic on the
 The Application Layer takes commands from the User Interface Layer and translates these commands to use case invocations on the domain layer. The Application Layer also provides transaction control for business operations. 
 Include:
 
-• Controller 
+• MVC 
 
-• View
+• DTO
 
-• Event
+• Validator
+
+• Facade
+
+• Mapper
 
 ## <a name="DomainLayer"><h2>Domain Layer</h2></a>
 The Domain Layer contains the real business logic, but does not contain any infrastructure specific code. The infrastructure specific implementation is provided by the Infrastructure Layer. Include:
@@ -122,14 +126,11 @@ So far we’ve covered the following sections of the Domain layer:
 ## <a name="InfrastructureLayer"><h2>Infrastructure Layer</h2></a>
 The Infrastructure Layer provides the infrastructure dependent parts for all other layers. This is up to you, as long the storage provides transaction control and guarantees consistency.  Include:
 
-• DTO
-
 • Repository
 
-• Service
+• Service for integration (FTP, API, LDAP)
 
 • Mailer
-
 
 # <a name="DDDConponents"><h1>DDD Conponents</h1></a>
 
