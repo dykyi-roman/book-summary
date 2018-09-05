@@ -12,7 +12,7 @@ ___
 [ - Refining knowledge](#RefiningKnowledge)  
 [ - Build Model](#BuildModel)  
 Domain modeling components:   
-[ - Entity, VO, Services](#)  
+[ - Entity, VO, Services](#Service)  
 [ - Module, Agregate, Factory](#Module)  
 
 ___
@@ -36,6 +36,9 @@ A developer who writes a code must understand why the model is so important. Oth
 If developers do not understand that with a change a code must change a model - refactoring make worse model. The goal ideo of the model - this is help developers. DDD with the help of the model - resolve a tasks using a processing of the knowledge bases on the unique language.
 
 # <h1>Domain modeling components</h1>
+
+## <a name="Service"><h2>Service</h2></a>
+We have to separate between services on the domain and application. Most services belong to the infrastructure layer. Domain Service can work with infrastructure service. Most services create and work using a Entity and VO.
 
 ## <a name="Module"><h2>Module</h2></a>
 Modules need to develop as well as project classes. They also need to be refactoring. The names for the modules must be from the model domain. Module separation is useful for developers. It makes it possible to work with the module-code as with the box without deep into details of the realisation
