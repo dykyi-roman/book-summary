@@ -11,6 +11,9 @@ ___
 [Unique language](#UniqueLanguage)  
 [ - Refining knowledge](#RefiningKnowledge)  
 [ - Build Model](#BuildModel)  
+Domain modeling components:   
+[ - Entity, VO, Services](#)  
+[ - Module, Agregate, Factory](#Module)  
 
 ___
 # <a name="UniqueLanguage"><h1>Unique language</h1></a>
@@ -31,3 +34,10 @@ You need to be prepared for the fact that knowledge will change. And they are no
 
 A developer who writes a code must understand why the model is so important. Otherwise, this model will not be usable. 
 If developers do not understand that with a change a code must change a model - refactoring make worse model. The goal ideo of the model - this is help developers. DDD with the help of the model - resolve a tasks using a processing of the knowledge bases on the unique language.
+
+# <h1>Domain modeling components</h1>
+
+## <a name="Module"><h2>Module</h2></a>
+Modules need to develop as well as project classes. They also need to be refactoring. The names for the modules must be from the model domain. Module separation is useful for developers. It makes it possible to work with the module-code as with the box without deep into details of the realisation
+
+
