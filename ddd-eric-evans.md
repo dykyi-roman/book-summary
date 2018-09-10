@@ -38,7 +38,8 @@ If developers do not understand that with a change a code must change a model - 
 # <h1>Domain modeling components</h1>
 
 ## <a name="Service"><h2>Service</h2></a>
-We have to separate between services on the domain and application. Most services belong to the infrastructure layer. Domain Service can work with infrastructure service. Most services create and work using a Entity and VO.
+We have to separate between services on the domain and application. Most services belong to the infrastructure layer. Domain Service can work with infrastructure service. Most services create and work using a Entity and VO. 
+All the domain logic is implemented in domain objects. The service layer is thin and used only for third party services. 
 
 ## <a name="Module"><h2>Module</h2></a>
 Modules need to develop as well as project classes. They also need to be refactoring. The names for the modules must be from the model domain. Module separation is useful for developers. It makes it possible to work with the module-code as with the box without deep into details of the realisation
