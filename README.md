@@ -13,23 +13,24 @@ My rules:
 
 * Do not use go-to. http://david.tribble.com/text/goto.html#example-e-1
 
-* Repeat code is - OK, repeat logig is NOT ok.
+* Repeat code is - OK, repeat logig is NOT OK. Abstraction is reusible, code is not reusible (Marco Piveta)
 
-* The code must be checked a SOLID principle after code-review (Uncle Bob)
-
-* Code-review must be doing before manual test
+* The code must be checked a SOLID principle after code-review (Uncle Bob). Code-review must be doing before manual test
 
 * Object must be transfer for another layer using DTO (low coupling principle)
 
 * Talk with a Domain layer using CommandBus and talk with a UI layer using Query Bus. Comand => Handler (SRP)
 
-* Do not use a Traits
-
-* All class is final. All properti and method private by default. 
+* All class is final. All properti and method private by default. Follow the immutable state in your class (no setters)
 
 * Do not use a option dependencies, better put DI in controller. 
 
 * Do not use a option swich param in function. Example: setActive($active = true)
+
+* Do not use a Fluent Interfaces. Becouse its difficult to maintainability and add new method. better usa a decorators
+
+* Do not use a Traits, Null variable
+
 
 
 
