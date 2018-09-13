@@ -8,7 +8,7 @@ Here I will publish a short summary of books and article that I read.
 4) [DDD Eric Evans](https://github.com/dykyi-roman/book-summary/blob/master/ddd-eric-evans.md)
 ____
 My rules:
-* Provide a SOLID acronym in your code. Thay are make your code both legible and extensible.
+* Provide a SOLID principe in your code. This acronym make your code both legible and extensible.
 
 * Do not create DTO for DTO, VO for VO, Service for Service... Any object should be created to solve a problem.
 
