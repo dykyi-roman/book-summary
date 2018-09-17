@@ -15,6 +15,8 @@ Domain modeling components:
 [ - Entity, VO, Services](#Service)  
 [ - Module, Aggregate, Factory](#Module)  
 [Shared kernel](#SharedKernel)  
+[Bounded context](#BoundedContexts)  
+
 ___
 # <a name="UniqueLanguage"><h1>Unique language</h1></a>
 
@@ -47,7 +49,13 @@ We need a group Vo and Entity in Aggregate and set a boundary betwen agreggate. 
 ## <a name="Module"><h2>Module</h2></a>
 Modules need to develop as well as project classes. They also need to be refactoring. The names for the modules must be from the model domain. Module separation is useful for developers. It makes it possible to work with the module-code as with the box without deep into details of the realisation
 
-# <a name="SharedKernal"><h1>Shared Kernal</h1></a>
+# <a name="SharedKernel"><h1>Shared Kernel</h1></a>
 
 Shared kernel - this is general part of code in code. The first integration strategy is to use a Shared Kernel, where a part of the Domain Model is shared between different teams working on the same application. Offten the shared kernel can be a code doman in the model. The common target this is set to min a duplication in code but not remove all duplication like in the bounded context. And make easy integration between two team.
 You can`t change a shared kernal so аften like a other part of the architecture. If you work on the product with othe team(group team) you can`t input a change without consultation with another team. If you inject a change inside a product bought team must run tests.
+
+
+# <a name="BoundedContexts"><h1>Bounded contexts</h1></a>
+
+Template conformist - this is opposite to shared kernel, using in situation where one team not cooperates with another team.
+Offten in development yoi need integrate your product with other, a good practic use a anticorruption layer. In development for this solution use a facade and adapter pattern. If you integrate with your internal product - situatuion more simple and you can modificate buth progrem part for integration. Otherwise you need yuse facade and transformer.
