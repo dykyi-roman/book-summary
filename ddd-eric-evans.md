@@ -49,5 +49,5 @@ Modules need to develop as well as project classes. They also need to be refacto
 
 # <a name="SharedKernal"><h1>Shared Kernal</h1></a>
 
-Shared kernel - this is general part of code in code. The first integration strategy is to use a Shared Kernel, where a part of the Domain Model is shared between different teams working on the same application. Offten the shared kernel can be a code doman in the model. The common target this is set to min a duplication in code but not remove all duplication like in the bounded context.
+Shared kernel - this is general part of code in code. The first integration strategy is to use a Shared Kernel, where a part of the Domain Model is shared between different teams working on the same application. Offten the shared kernel can be a code doman in the model. The common target this is set to min a duplication in code but not remove all duplication like in the bounded context. And make easy integration between two team.
 You can`t change a shared kernal so аften like a other part of the architecture. If you work on the product with othe team(group team) you can`t input a change without consultation with another team. If you inject a change inside a product bought team must run tests.
