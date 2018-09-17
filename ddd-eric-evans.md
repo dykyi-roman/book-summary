@@ -16,7 +16,7 @@ Domain modeling components:
 [ - Module, Aggregate, Factory](#Module)  
 [Shared kernel](#SharedKernel)  
 [Bounded context](#BoundedContexts)  
-
+[ - Core Domain](#CoreDomain)  
 ___
 # <a name="UniqueLanguage"><h1>Unique language</h1></a>
 
@@ -58,4 +58,8 @@ You can`t change a shared kernal so аften like a other part of the architecture
 # <a name="BoundedContexts"><h1>Bounded contexts</h1></a>
 
 Template conformist - this is opposite to shared kernel, using in situation where one team not cooperates with another team.
-Offten in development yoi need integrate your product with other, a good practic use a anticorruption layer. In development for this solution use a facade and adapter pattern. If you integrate with your internal product - situatuion more simple and you can modificate buth progrem part for integration. Otherwise you need yuse facade and transformer.
+Offten in development yoi need integrate your product with other, a good practic use a anticorruption layer. In development for this solution use a facade and adapter pattern. If you integrate with your internal product - situatuion more simple and you can modificate buth progrem part for integration. Otherwise you need yuse facade and transformer. 
+
+## <a name="CoreDomain"><h2Core Domain</h2></a>
+
+How consider the main problem and not spend a time for a detail. Distillation - this is a process divide a component for a select a main (core domain). With each step of the deepening refactoring, we abstract some aspect of knowledge and priorities. Core domain can help as to better understand a architecture and relationships between components? set a way for refactoring, focus on the main detail in the projects, help with comunication. 
