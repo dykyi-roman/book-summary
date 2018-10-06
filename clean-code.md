@@ -38,6 +38,22 @@ ___
 
 # <a name="Function"><h1>Function</h1></a>
 
-=> The function must be short and do it only one operation. One operation its means one job on the one code layer.
+=> The function must be short and do it only one operation. One operation its means one job on the one code layer
+
+=> Not afraid a long function name. A function must say what function do it
+
+=> Replace switch operator to Abstract factory. Switch is broken a SRP and OC principle
+
+=> A perfect situation when you use zero arguments in the function. A meny argument give for you many test combination
+
+=> If function a change input element, the result must be return. Not void function use for that
+
+=> Not use a bool argumet in funtion, this is broken a SRP principle. The better create a two function
+
+=> Avoid a side effect after call you function (SRP principle). 
+
+=> Function must doing something or answer for a question. set() or get() not in one time.
+
+=> 
 
 
