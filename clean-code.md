@@ -54,6 +54,6 @@ ___
 
 => Function must doing something or answer for a question. set() or get() not in one time.
 
-=> 
+=> Put a try..catch block in separate function
 
 
