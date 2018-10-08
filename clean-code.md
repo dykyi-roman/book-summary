@@ -18,6 +18,7 @@ This code esy supports.
 ##### Content  
 [Name](#Name)  
 [Function](#Function)  
+[Comments](#Comments)  
 
 ___
 # <a name="Name"><h1>Name of (Variable, Function, Class, Interface)</h1></a>
@@ -55,5 +56,13 @@ ___
 => Function must doing something or answer for a question. set() or get() not in one time.
 
 => Put a try..catch block in separate function
+
+# <a name="Comments"><h1>Comments</h1></a>
+
+=> THe first and the most importent rules is not use a comments
+
+=> Use a TODO marks for a temp part od code
+
+=> Update comment togather with update your code
 
 
