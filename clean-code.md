@@ -20,6 +20,7 @@ This code esy supports.
 [Function](#Function)  
 [Comments](#Comments)  
 [Objects And Structure Data](#ObjectsAndStructureData)  
+[Tests](#Tests)  
 
 ___
 # <a name="Name"><h1>Name of (Variable, Function, Class, Interface)</h1></a>
@@ -76,7 +77,10 @@ ___
 
 => Avoid null return, use a special case or null object or generate excaption
 
-=> Not use a null parameter by default int function attribute
+=> Avoid null parameter by default in the attribute of a function
 
+# <a name="Tests"><h1>Tests</h1></a>
 
+=> Write tests for outside package. The code must do it what you expect
 
+=>
