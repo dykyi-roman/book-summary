@@ -36,7 +36,9 @@ My rules:
 
 * Do not use a Fluent Interfaces. Becouse its difficult to maintainability and add new method. better usa a decorators
 
-* Do not use a Traits, Null variable
+* Do not use a Traits
+
+* Write tests for outside package. The code must do it what you expect 
 
 
 
