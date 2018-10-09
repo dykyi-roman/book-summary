@@ -19,6 +19,7 @@ This code esy supports.
 [Name](#Name)  
 [Function](#Function)  
 [Comments](#Comments)  
+[Objects And Structure Data](#ObjectsAndStructureData)  
 
 ___
 # <a name="Name"><h1>Name of (Variable, Function, Class, Interface)</h1></a>
@@ -55,7 +56,9 @@ ___
 
 => Function must doing something or answer for a question. set() or get() not in one time.
 
-=> Put a try..catch block in separate function
+=> Put a try..catch block in another function for separate a bussines logic from catcherrors. 
+
+=> Do not use try..catch for a put logic. in the catch. A code not must move from low level to upper. Broken OCP.
 
 # <a name="Comments"><h1>Comments</h1></a>
 
@@ -64,5 +67,16 @@ ___
 => Use a TODO marks for a temp part od code
 
 => Update comment togather with update your code
+
+# <a name="ObjectsAndStructureData"><h1>Objects and Structure data</h1></a>
+
+=> Law of Demeter (LoD)
+
+=> The Object is shown behaviors and hides a data. The structure data is otherwise. Avoid a mix.
+
+=> Avoid null return, use a special case or null object or generate excaption
+
+=> Not use a null parameter by default int function attribute
+
 
 
