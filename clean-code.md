@@ -3,6 +3,8 @@ Name: Clean Code
 Author: Robert Martin
 
 Description: This is must read book
+
+PDF: https://www.investigatii.md/uploads/resurse/Clean_Code.pdf
 ___
 
 I want a describe some rule how a take your code clear and clean. Before we start write a rules we must understand what is a good code. 
