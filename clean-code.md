@@ -65,9 +65,9 @@ ___
 
 => THe first and the most importent rules is not use a comments
 
-=> Use a TODO marks for a temp part od code
+=> Use a TODO marks for a temp part of code
 
-=> Update comment togather with update your code
+=> Update comment togather with your code
 
 # <a name="ObjectsAndStructureData"><h1>Objects and Structure data</h1></a>
 
@@ -79,8 +79,17 @@ ___
 
 => Avoid null parameter by default in the attribute of a function
 
+=> High cohesion and Low coupling support for a small class with SRP
+
+=> Separate create and using object. Use DI, Factory, Proxy, Adapter patterns for that 
+
 # <a name="Tests"><h1>Tests</h1></a>
 
 => Write tests for outside package. The code must do it what you expect
 
-=>
+=> Test code must be good writing like your code code
+
+=> TDD is a good practice
+
+=> Write positive and negative tests
+ 
