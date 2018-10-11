@@ -40,7 +40,7 @@ My rules:
 
 * Write tests for outside package. The code must do it what you expect 
 
-* Avoid use a pattern name and domain name in word postfix 
+* Avoid use a pattern name and domain name in class name postfix 
 
 
 
