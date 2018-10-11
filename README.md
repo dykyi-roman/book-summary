@@ -24,6 +24,8 @@ My rules:
 
 * The code must be checked a SOLID principle after code-review (Uncle Bob). Code-review must be doing before manual test
 
+* Low coupling must be folow between methods to. Example: using one variable in both methods create a lot of coupling
+
 * Object must be transfer for another layer using DTO (low coupling principle)
 
 * Talk with a Domain layer using CommandBus and talk with a UI layer using Query Bus. Comand => Handler (SRP)
@@ -41,7 +43,6 @@ My rules:
 * Write tests for outside package. The code must do it what you expect 
 
 * Avoid use a pattern name and domain name in class name postfix 
-
 
 
 
