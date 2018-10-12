@@ -44,5 +44,6 @@ My rules:
 
 * Avoid use a pattern name and domain name in class name postfix 
 
+* Avoid situation when method uses the functionality of another. It`s better to put this code inside the object
 
 
