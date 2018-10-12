@@ -14,9 +14,11 @@ ____
 ____
 
 My rules:
-* Provide a SOLID principe in your code. This acronym make your code both legible and extensible.
+* Provide a SOLID principe in your code. This acronym make your code both legible and extensible
 
-* Do not create DTO for DTO, VO for VO, Service for Service... Any object should be created to solve a problem.
+* After the finish of work with function, to make sure that this is a best your code. Stop, and make refactoring
+
+* Do not create DTO for DTO, VO for VO, Service for Service... Any object should be created to solve a problem
 
 * Do not use go-to. http://david.tribble.com/text/goto.html#example-e-1
 
