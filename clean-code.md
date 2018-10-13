@@ -14,8 +14,8 @@ This is code is easy read not only owner and other developer.
 This code when author make a good work for a write code.
 This code understand after first read. 
 This code not have a logic dublication.
-This code esy cover a tests.
-This code esy supports.
+This code easy cover a tests.
+This code easy supports.
 
 ##### Content  
 [Name](#Name)  
@@ -23,7 +23,7 @@ This code esy supports.
 [Comments](#Comments)  
 [Objects And Structure Data](#ObjectsAndStructureData)  
 [Tests](#Tests)  
-
+[Code Smell](#CodeSmell)   
 ___
 # <a name="Name"><h1>Name of (Variable, Function, Class, Interface)</h1></a>
 
@@ -98,4 +98,43 @@ ___
 => Write positive and negative tests
 
 => Use a service who can help with analyze your code
- 
+
+# <a name="CodeSmell"><h1>Code Smell</h1></a>
+
+=> Comments: old, bad, not information, very big, code with comments - should be removed
+
+=> The test should be running one command or one button
+
+=> Function: A low count of component, without flag argument (boolean), obviously behavior
+
+=> One language in one result file
+
+=> Do not turn off protected layer in your language and IDE
+
+=> Code: in the right layer of abstraction, without duplication, Use PSR-2 standart
+
+=> Definition of variable near the using place
+
+=> Functionality dependence
+
+=> Reduce a use a static function and switch opeartor
+
+=> Write a small function with a good name
+
+=> Have to Understanding algorithm what are you doing
+
+=> Encapsulate (if)condition inside a class or use a specification pattern
+
+=> Avoid a negative condition
+
+=> Use a Factory for many function that must call one by one
+
+=> Code and function should be write on the one abstract layer
+
+=> Keep a const and configuration in the high abstract layer
+
+=> Follow the law of Demetra
+
+=> Use a long name for public namespace and short for a private
+
+=> Define a side effect your function in it name. Exxample: CreateOrReturnExistObject 
