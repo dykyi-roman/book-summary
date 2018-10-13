@@ -85,6 +85,8 @@ ___
 
 => Separate create and using object. Use DI, Factory, Proxy, Adapter patterns for that 
 
+=> Use enum in your code
+
 # <a name="Tests"><h1>Tests</h1></a>
 
 => Write tests for outside package. The code must do it what you expect
@@ -94,4 +96,6 @@ ___
 => TDD is a good practice
 
 => Write positive and negative tests
+
+=> Use a service who can help with analyze your code
  
