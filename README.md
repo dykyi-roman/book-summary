@@ -34,7 +34,7 @@ My rules:
 
 * All class is final. All properti and method private by default. Follow the immutable state in your class (no setters)
 
-* Do not use a option dependencies, better put DI in controller. 
+* Do not use a option dependencies, better put DI in controller
 
 * Do not use a option swich param in function. Example: setActive($active = true)
 
