@@ -3,8 +3,6 @@ Name: Domain Driven Design
 Author: Vaughn Vernon
 
 Description: This is must read book
-
-PDF: [read](https://domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf)
 ___
 ##### Content  
 [Intro](#Intro)
