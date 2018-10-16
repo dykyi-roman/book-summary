@@ -7,6 +7,7 @@ Here I will publish a short summary of books and article that I read.
 3) [Elegant Objects](https://github.com/dykyi-roman/book-summary/blob/master/elegant-objects.md)
 4) [DDD Eric Evans](https://github.com/dykyi-roman/book-summary/blob/master/ddd-eric-evans.md)
 5) [Clean Code](https://github.com/dykyi-roman/book-summary/blob/master/clean-code.md)
+6) [ddd Vernon](https://github.com/dykyi-roman/book-summary/blob/master/ddd-vernon.md)
 ____
 # Articles:
 
