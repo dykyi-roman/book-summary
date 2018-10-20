@@ -25,4 +25,4 @@ Bounded context - consists of domain and subdomain. Most often the domain can be
 The word book in two context means the diferent. Example in marketing the book this is a set of attributes(author, title, page count). In typography  the book this is a set of attributes(author, title, count, price...). A good way use a DTO for move object from one context to the second. If books use in both context - this is a bad architecture, but if this is not a shared kernel.
 
 Start build your context map from the one big context. Then write names what you know inside this map, then grouping this names for a thema. Write a context line. After that describe a relation between context. In all context create inside VO, Entity, Aggregate, Events...
-From you depend on how will be communicated your context, it can be rest or queue (if few contexts in one module it can be aggregate root).
+From you depend on how will be communicated your context, it can be rest or queue (if few contexts in one module it can be aggregate root). Example: supervisor call a worker => worker call a service => service call adapter => adapter take data => transform data => send response
