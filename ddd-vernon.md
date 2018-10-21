@@ -40,5 +40,5 @@ DDD aprouch good come in all architecture style:
 - CQRS
 - Event sourcing:
   save event + snapshot. First find object in snaphot table the  run all event FROM snapshot make time TO now 
-- Data fabric:
+- Data factory:
   Idea in save serialize object instead events and save in key(id) - value(bin object) data. The powerfull in replication and return agregate to client.
