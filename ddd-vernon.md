@@ -33,5 +33,12 @@ From you depend on how will be communicated your context, it can be rest or queu
 A lot of people thinks that many layers architecture - has a parent for all architectures. That contain with user interface, domain, application, infrastructure. One module does not know about existing another module. 
 Up layer can contact only with a down layer and use only low relation. Example use patern mediator (command bus) or observer (events).
 
-
-
+DDD aprouch good come in all architecture style:
+- layered architecture
+- hexagonal architecture 
+- Events orientation (chanel and filters & Long processing)
+- CQRS
+- Event sourcing:
+  save event + snapshot. First find object in snaphot table the  run all event FROM snapshot make time TO now 
+- Data fabric:
+  Idea in save serialize object instead events and save in key(id) - value(bin object) data. The powerfull in replication and return agregate to client.
