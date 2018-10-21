@@ -6,7 +6,8 @@ Description: This is must read book
 ___
 ##### Content  
 [Intro](#Intro)   
-[Bounded Сontext](#BoundedСontext)
+[Bounded Сontext](#BoundedСontext)   
+[Architecture](#Architecture)   
 
 # <a name="Intro"><h1>Intro</h1></a>
 
@@ -26,3 +27,11 @@ The word book in two context means the diferent. Example in marketing the book t
 
 Start build your context map from the one big context. Then write names what you know inside this map, then grouping this names for a thema. Write a context line. After that describe a relation between context. In all context create inside VO, Entity, Aggregate, Events...
 From you depend on how will be communicated your context, it can be rest or queue (if few contexts in one module it can be aggregate root). Example: supervisor call a worker => worker call a service => service call adapter => adapter call http facade => adapter take data => transform data => send response
+
+# <a name="Architecture"><h1>Architecture</h1></a>
+
+A lot of people thinks that many layers architecture - has a parent for all architectures. That contain with user interface, domain, application, infrastructure. One module does not know about existing another module. 
+Up layer can contact only with a down layer and use only low relation. Example use patern mediator (command bus) or observer (events).
+
+
+
