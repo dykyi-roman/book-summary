@@ -7,7 +7,8 @@ ___
 ##### Content  
 [Intro](#Intro)   
 [Bounded Сontext](#BoundedСontext)   
-[Architecture](#Architecture)   
+[Architecture](#Architecture)  
+[VO](#VO)  
 
 # <a name="Intro"><h1>Intro</h1></a>
 
@@ -42,3 +43,23 @@ DDD aprouch good come in all architecture style:
   save event + snapshot. First find object in snaphot table the  run all event FROM snapshot make time TO now 
 - Data factory:
   Idea in save serialize object instead events and save in key(id) - value(bin object) data. The powerfull in replication and return agregate to client.
+
+
+# <a name="VO"><h1>VO</h1></a>
+VO:
+
+* describe simple elements of the system
+
+* is immutable, not change an object state 
+
+* set attribute value only from a constructor or if you want to to use e setter - that must return a new vo object
+
+* without side effect
+
+* simple create, use, tests, support, update...
+
+If one of the attributes from your object will be changing during a time object life - think about change object method.
+In some case when you do not want use a STATE pattern you can take a VO + ENUM. 
+
+Good practice has extended(return) VO from service. Example: CurrencyServive => return CurrencyType VO.
+Another way is create factory, static create immutable VO for standart type. 
