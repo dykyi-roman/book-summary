@@ -63,3 +63,8 @@ In some case when you do not want use a STATE pattern you can take a VO + ENUM.
 
 Good practice has extended(return) VO from service. Example: CurrencyServive => return CurrencyType VO.
 Another way is create factory, static create immutable VO for standart type. 
+
+Writing the tests we need protect object from motification!
+
+Some time we need save VO in DB. the data writing in DB need have an id for saving. We add attribute ID in VO. When its happens read 319 page and think about need transform VO to Entity or not. Anothr way use a parent primary key for save VO in another table 
+
