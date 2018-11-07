@@ -9,6 +9,7 @@ ___
 [Bounded Сontext](#BoundedСontext)   
 [Architecture](#Architecture)  
 [VO](#VO)  
+[Module](#Module)  
 
 # <a name="Intro"><h1>Intro</h1></a>
 
@@ -68,3 +69,16 @@ Writing the tests we need protect object from motification!
 
 Some time we need save VO in DB. the data writing in DB need have an id for saving. We add attribute ID in VO. When its happens read 319 page and think about need transform VO to Entity or not. Anothr way use a parent primary key for save VO in another table 
 
+# <a name="Module"><h1>Module</h1></a>
+
+Module this is a tool for related components with the same area together. When you think and operate domain components, you need follow simple rules:
+
+1) Module can include 1-3 aggregate 
+
+2) Choose the name in a domain area
+
+3) Do not create module automatic. Do not creat folder service, entity ... and put all service in one folder and all enity in other
+
+4) Follow a low coupling between module
+
+In layer or hexagonal architecture common folder structure next: domain, infrastructure, user interface.
