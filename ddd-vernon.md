@@ -10,6 +10,7 @@ ___
 [Architecture](#Architecture)  
 [VO](#VO)  
 [Module](#Module)  
+[Aggregate](#Aggregate)  
 
 # <a name="Intro"><h1>Intro</h1></a>
 
@@ -82,3 +83,10 @@ Module this is a tool for related components with the same area together. When y
 4) Follow a low coupling between module
 
 In layer or hexagonal architecture common folder structure next: domain, infrastructure, user interface.
+
+# <a name="Aggregate"><h1>Aggregate</h1></a>
+
+Aggregate this is object that have inside Entity and VO. One Aggregate can be change in one transaction. One context have only one aggregate - this is a main rule.
+
+
+
