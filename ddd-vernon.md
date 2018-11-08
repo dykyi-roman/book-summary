@@ -86,7 +86,8 @@ In layer or hexagonal architecture common folder structure next: domain, infrast
 
 # <a name="Aggregate"><h1>Aggregate</h1></a>
 
-Aggregate this is object that have inside Entity and VO. One Aggregate can be change in one transaction. One context have only one aggregate - this is a main rule.
+Aggregate this is object that have inside Entity and VO. One Aggregate can be change in one transaction. One context have only one aggregate - this is a main rule. Use a AggregateId for set a link to other aggregate, do not use an object href.
+
 
 
 
