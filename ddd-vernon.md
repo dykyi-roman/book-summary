@@ -9,6 +9,9 @@ ___
 [Bounded Сontext](#BoundedСontext)   
 [Architecture](#Architecture)  
 [VO](#VO)  
+[DTO & DPO](#TDOTPO)
+[ - Data Transformer](#TD)
+[ - Presentation Model](#PM)
 [Module](#Module)  
 [Aggregate](#Aggregate)  
 
@@ -69,6 +72,20 @@ Another way is create factory, static create immutable VO for standart type.
 Writing the tests we need protect object from motification!
 
 Some time we need save VO in DB. the data writing in DB need have an id for saving. We add attribute ID in VO. When its happens read 319 page and think about need transform VO to Entity or not. Anothr way use a parent primary key for save VO in another table 
+
+# <a name="DTODPO"><h1>DTO & DPO & Data Transformer</h1></a>
+
+TDO - Domain Transfer Object - use for a transfer data between remove layers. Use for a display data in UI. Always Immutable. DTO create on the domain layer, serealize, and send be a network and deserealise on the presentation layer. If you not have a remote service TDO is not needed for you.
+
+DPO - Domain Payload Object - alike a DTO case usage but using for application with one virtual machine. This object include a link for an objects and not exist fields with object properties. You can move this obhect between logic layer like a simle container object. DPO simle create. Thay spend a small memory because you not load all object for read property.But this way hava a minus becouse you have access for all object methods.
+
+# <a name="TD"><h2>Data Transformer</h2></a>
+
+Data Transfer Object - this object use like a param and inject from DI in constructor class. The service who use a transform object must doit a double dispatch.
+
+# <a name="PM"><h2>Presentation Model</h2></a>
+
+Presentation Model - this is a facade for work with a service method(logic) from UI. Work like adapter and hide a detail and give for presentation (function and property) with presentation orientation. The second his role - if some class not have a get() method thay can write a wrapper for each function without a getter. Instead of adding a field to the model that does not belong to it, you can use a Presentation Model. Can have a service by DI in the constructor and use only for DELEGATION operation from layer AND NO MORE. Exanmple: page 612(BacklogItemPresentationModel)
 
 # <a name="Module"><h1>Module</h1></a>
 
