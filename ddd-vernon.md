@@ -73,7 +73,7 @@ Writing the tests we need protect object from motification!
 
 Some time we need save VO in DB. the data writing in DB need have an id for saving. We add attribute ID in VO. When its happens read 319 page and think about need transform VO to Entity or not. Anothr way use a parent primary key for save VO in another table 
 
-# <a name="DTODPO"><h1>DTO & DPO & Data Transformer</h1></a>
+# <a name="DTODPO"><h1>DTO & DPO</h1></a>
 
 TDO - Domain Transfer Object - use for a transfer data between remove layers. Use for a display data in UI. Always Immutable. DTO create on the domain layer, serealize, and send be a network and deserealise on the presentation layer. If you not have a remote service TDO is not needed for you.
 
