@@ -9,9 +9,9 @@ ___
 [Bounded Сontext](#BoundedСontext)   
 [Architecture](#Architecture)  
 [VO](#VO)  
-[DTO & DPO](#TDOTPO)
-[ - Data Transformer](#TD)
-[ - Presentation Model](#PM)
+[DTO & DPO](#TDOTPO)  
+[ - Data Transformer](#TD)  
+[ - Presentation Model](#PM)  
 [Module](#Module)  
 [Aggregate](#Aggregate)  
 
