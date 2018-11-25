@@ -14,6 +14,7 @@ ___
 [ - Presentation Model](#PM)  
 [Module](#Module)  
 [Aggregate](#Aggregate)  
+[Repository](#Repository)  
 
 # <a name="Intro"><h1>Intro</h1></a>
 
@@ -105,6 +106,7 @@ In layer or hexagonal architecture common folder structure next: domain, infrast
 
 Aggregate this is object that have inside Entity and VO. One Aggregate can be change in one transaction. One context have only one aggregate - this is a main rule. Use a AggregateId for set a link to other aggregate, do not use an object href.
 
+# <a name="Repository"><h1>Repository</h1></a>
 
-
-
+Realisation repository only for aggregate. Exist a two type repository: oriented by collection and persistence. Using collection you can not add twice the same aggregate. Collection save data not obviously and have a method save(). Repository can return VO or Aggregate.
+Transaction better put in the Factory. DAO - for CRUD. No logic in repository.
