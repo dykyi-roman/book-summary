@@ -8,6 +8,7 @@ Here I will publish a short summary of books and article that I read.
 4) [DDD Eric Evans](https://github.com/dykyi-roman/book-summary/blob/master/ddd-eric-evans.md)
 5) [Clean Code](https://github.com/dykyi-roman/book-summary/blob/master/clean-code.md)
 6) [DDD Vernon](https://github.com/dykyi-roman/book-summary/blob/master/ddd-vernon.md)
+7) [Refactoring](https://github.com/dykyi-roman/book-summary/blob/master/refactoring.md)
 ____
 # Articles:
 
