@@ -15,7 +15,7 @@ ___
 
 
 ___
-# <a name="Examplpe"><h1>Examplpe</h1></a>
+# <a name="Rules"><h1>Rules</h1></a>
 
 • If you need to add new functionality in the program and see that code have a bad structure for add - this is a good chance for make refactoring, but before refactor - write a test.
 
