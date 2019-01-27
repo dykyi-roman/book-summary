@@ -10,7 +10,7 @@ PDF: [read](https://www.csie.ntu.edu.tw/~r95004/Refactoring_improving_the_design
 ___
 ##### Содержание  
 [Refactoring](#Refactoring)   
-[Refactoring](#Principles)   
+[Principles](#Principles)   
 
 
 ___
