@@ -1,23 +1,24 @@
-Name: Domain-Driven Design in PHP
+Name: Refactoring improving the design of existing code
 
-Author: Carlos Buenosvinos, Christian Soronellas, and Keyvan Akbary
+Author: Martin Fowler, Kent Beck (Contributor)... 
 
-Description: In this book you can find a real examples written in PHP showcasing DDD Architectural Styles, Tactical Design, and Bounded Context Integration
+Description: Your class library works, but could it be better? Refactoring: Improving the Design of Existing Code shows how refactoring can make object-oriented code simpler and easier to maintain. 
 
-Tactical patterns: Entities, Value Objects, Services, Domain Events, Aggregates, Factories, Repositories and Application Services; with real examples in PHP. Explore the advantages of Hexagonal Architecture and understand Strategic design with Bounded Contexts and their integration through REST and message queues.
+WEB: [refactoring.guru](https://refactoring.guru/refactoring)
 
-Github: https://github.com/dddinphp
-
-PDF: [read](http://xeroxmobileprint.net/DiscoveryTable/test/folder1/Domain-Driven_Design_in_PHP.pdf)
+PDF: [read](https://www.csie.ntu.edu.tw/~r95004/Refactoring_improving_the_design_of_existing_code.pdf)
 ___
 ##### Содержание  
-[Example](#Examople)
+[Refactoring](#Refactoring)   
+[Refactoring](#Principles)   
 
 
 ___
-# <a name="Rules"><h1>Rules</h1></a>
+# <a name="Refactoring"><h1>Refactoring</h1></a>
 
-• If you need to add new functionality in the program and see that code have a bad structure for add - this is a good chance for make refactoring, but before refactor - write a test.
+If you need to add new functionality in the program and see that code have a bad structure for add - this is a good chance for make refactoring, but before refactor - write a test.
+
+# <a name="Principles"><h1>Principles</h1></a>
 
 
  
