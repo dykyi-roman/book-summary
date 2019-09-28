@@ -10,12 +10,12 @@ Here I will publish a short summary of books and article that I read.
 6) [DDD Vernon](https://github.com/dykyi-roman/book-summary/blob/master/ddd-vernon.md)
 7) [Refactoring](https://github.com/dykyi-roman/book-summary/blob/master/refactoring.md)
 ____
-# Articles:
-
-* 
-____
 
 My rules:
+* DRY is not a silver bullet. Imagine that you have a class (A) and class (B) with the same logic in code. And you create a class (C) and move this code here. All looks fine you do not have duplication in your code, but when you something changes in the logic - changing the logic in 2 classes. So, the good design is to have a control for you abstraction use SRP for you class in Shared Kernel area (DDD)
+
+* Will always be broken some principle, the goal is still to always choose the minimum of evil and skillfully maneuver in this shit
+
 * Provide a SOLID principe in your code. This acronym make your code both legible and extensible
 
 * After the finish of work with function, to make sure that this is a best your code. Stop, and make refactoring
@@ -28,7 +28,7 @@ My rules:
 
 * The code must be checked a SOLID principle after code-review (Uncle Bob). Code-review must be doing before manual test
 
-* Low coupling must be folow between methods to. Example: using one variable in both methods create a lot of coupling
+* Low coupling must be folow between methods too. Example: using one variable in both methods create a lot of coupling
 
 * Object must be transfer for another layer using DTO (low coupling principle)
 
@@ -42,7 +42,7 @@ My rules:
 
 * Do not use a Fluent Interfaces. Becouse its difficult to maintainability and add new method. better usa a decorators
 
-* Do not use a Traits
+* Do not use a Traits https://codereview.stackexchange.com/questions/74077/trait-accessing-variables-of-classes-using-it
 
 * Write tests for outside package. The code must do it what you expect 
 
