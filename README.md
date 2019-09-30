@@ -16,6 +16,8 @@ My rules:
 
 * Will always be broken some principle, the goal is still to always choose the minimum of evil and skillfully maneuver in this shit
 
+* Service locator as anti-pattern Use DI https://sarvendev.com/en/2017/11/service-locator-vs-dependency-injection-en/
+
 * Provide a SOLID principe in your code. This acronym make your code both legible and extensible
 
 * After the finish of work with function, to make sure that this is a best your code. Stop, and make refactoring
